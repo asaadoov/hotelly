@@ -12,6 +12,14 @@ class HotelSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->insert([
+            'name' => 'Asaad',
+            'email' => 's3doon5@gmail.com',
+            'password' => Hash::make('12345678'),
+            'email_verified_at' => date('Y-m-d H:i:s'),
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
         // insert room types
         DB::table('room_types')->insert([
             'name' => 'Double Queen',
