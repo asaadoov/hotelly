@@ -17,6 +17,7 @@ class CreateHotelTables extends Migration
             $table->bigIncrements('id')->comment('The Primary Key for the table.');
             $table->string('name', 255)->comment('The name of the room type, ie Double Queen, etc.');
             $table->text('description')->comment('The full text description of the room type.');
+            $table->longText('picture')->comment('The picture file path.')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
