@@ -18,9 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    $secret = encrypt("I'm Black");
-    var_dump($secret);
-    var_dump(decrypt($secret));
     return 'Welcome';
 })->middleware('auth');
 
